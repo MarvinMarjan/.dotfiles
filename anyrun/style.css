@@ -1,0 +1,55 @@
+* {
+	font-family: "Varela Round";
+}
+
+#window {
+	background: transparent;
+}
+
+
+#entry {
+	background: rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 150, 150, 0.8);
+	border-radius: 15px;
+	box-shadow: none;
+	caret-color: rgba(255, 150, 150, 0.8);
+}
+
+
+list#main {
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	margin-top: 10px;
+	padding: 5px;
+	border: 2px solid rgba(255, 150, 150, 0.8);
+}
+
+
+#plugin {
+	background: transparent;
+	border: none;
+}
+
+label#plugin {
+	margin-right: 110px;
+}
+
+
+#match {
+	min-width: 100px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	border-radius: 7px;
+}
+
+
+#match:hover {
+	background-color: rgba(255, 150, 150, 0.3);
+}
+
+#match:selected {
+	background: transparent;
+	border: 1px solid rgba(255, 150, 150, 0.6);
+	border-left: 10px solid rgba(255, 150, 150, 0.6);
+	box-shadow: 0 0 3px rgba(255, 150, 150, 0.8);
+}

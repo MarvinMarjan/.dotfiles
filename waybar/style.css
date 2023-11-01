@@ -1,0 +1,149 @@
+@define-color bg-color			rgba(0, 0, 0, 0.1);
+@define-color hover-bg-color	rgba(255, 150, 150, 0.3);
+@define-color border-color		rgba(255, 150, 150, 0.8);
+
+
+
+* {
+    min-height: 0px;
+    min-width: 0px;
+    font-family: "Varela Round";
+    font-size: 12px;
+}
+
+
+window#waybar {
+    background: none;
+    border: none;
+}
+
+
+
+
+#taskbar,
+#network,
+#clock,
+#mpris,
+#pulseaudio,
+#backlight,
+#workspaces,
+#cpu,
+#memory,
+#battery {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: @bg-color;
+    border-radius: 15px;
+    border: 1px solid @border-color;
+}
+
+
+
+#taskbar {
+    min-height: 32px;
+    border-radius: 8px;
+    padding: 0;
+}
+
+#taskbar button {
+    background-color: transparent;
+    border-radius: inherit;
+    border: none;
+    text-shadow: none;
+    transition: background-color 200ms, border 200ms;
+}
+
+#taskbar button:hover {
+    background-color: @hover-bg-color;
+}
+
+#taskbar button.active {
+    border-top: 2px solid @border-color;
+    border-bottom: 2px solid @border-color;
+}
+
+
+
+
+#network {
+    margin-left: 30px;
+}
+
+
+#clock.time {
+    min-width: 50px;
+    margin-left: 15px;
+}
+
+#clock.date {
+    margin-right: 0px;
+    margin-left: 1px;
+}
+
+
+#mpris {
+    margin-left: 20px;
+}
+
+
+#pulseaudio {
+    margin-left: 10px;
+    border-radius: 15px 0 0 15px;
+    border-right: none;
+    padding-left: 7px;
+	padding-right: 0px;
+}
+
+#backlight {
+    border-radius: 0 15px 15px 0;
+    border-left: none;
+    margin-right: 30px;
+    padding-left: 7px;
+}
+
+
+
+
+#workspaces {
+    margin-right: 35px;
+    min-height: 30px;
+    padding: 0;
+}
+
+#workspaces button {
+    padding-top: 6px;
+    background: none;
+    border-radius: inherit;
+    border: none;
+    text-shadow: none;
+    transition: background-color 200ms, border 200ms;
+}
+
+#workspaces button:hover {
+    background-color: @hover-bg-color;
+}
+
+#workspaces button.active {
+    border-top: 2px solid @border-color;
+    border-bottom: 2px solid @border-color;
+}
+
+
+
+
+#cpu {
+    border-radius: 15px 0 0 15px;
+    border-right: none;
+}
+
+#memory {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+}
+
+#battery {
+    border-radius: 0 15px 15px 0;
+    margin-right: 30px;
+    border-left: none;
+}

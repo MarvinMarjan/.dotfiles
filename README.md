@@ -1,0 +1,1 @@
+My Manjaro Linux hyprland configuration files (and general environment stuff). It give a lot of work to set up all of these components, so i needed to save it in somewhere.

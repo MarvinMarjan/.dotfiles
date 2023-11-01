@@ -1,0 +1,105 @@
+[{
+    "name": "status-bar",
+    "position": "top",
+
+    "layer": "top",
+    "margin-top": 10,
+
+    "modules-left": ["network", "clock#time", "clock#date", "mpris"],
+    "modules-right": ["hyprland/workspaces", "cpu", "memory", "battery"],
+    "modules-center": ["pulseaudio", "backlight"],
+
+
+
+    "network": {
+        "interval": 10,
+        "format-wifi": "{signalStrength}% <span font-family='Font Awesome 6 Free'></span>",
+        "format-disconnected": "No Connection :(",
+        "tooltip-format-wifi": "{essid}"
+    },
+
+    "clock#time": {
+        "format": "{:%H:%M}  <span font-family='Font Awesome 6 Free'></span>",
+        "format-alt": "{:%H:%M:%S}  <span font-family='Font Awesome 6 Free'></span>",
+        "tooltip-format": "{calendar}",
+        "interval": 1
+    },
+
+    "clock#date": {
+        "format": "{: %a, %d / %m / %Y}",
+        "format-alt": "{:%A, %d de %B de %Y}",
+        "actions": {
+            "on-click": "mode"
+        }
+    },
+
+    "mpris": {
+        "interval": 1,
+        "format-playing": "<span font-family='Font Awesome 6 Free'></span>   {title}",
+        "format-paused": "<span font-family='Font Awesome 6 Free'></span>   {title}",
+        "title-len": 30,
+        "tooltip-format": "{title} - {artist}   ({position} : {length})"
+    },
+
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "<sup>{icon}</sup>  {volume}%  <span font-family='Font Awesome 6 Free'></span> ⭢ {desc}  │",
+        "format-muted": "<span font-family='Font Awesome 6 Free'></span>",
+        "format-icons": {
+            "default": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+        }
+    },
+
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": [""]
+    },
+
+
+
+    "hyprland/workspaces": {
+        "persistent-workspaces": {
+            "*": 3
+        }
+    },
+
+
+
+    "cpu": {
+        "format": "{usage}%  <span font-family='Font Awesome 6 Free'></span>",
+        "interval": 1,
+        "on-click": "gnome-system-monitor"
+    },
+
+    "memory": {
+        "format": "{}%  <span font-family='Font Awesome 6 Free'></span>",
+        "interval": 1,
+        "on-click": "gnome-system-monitor"
+    },
+    
+    "battery": {
+        "format": "{capacity}%  <span font-family='Font Awesome 6 Free'>{icon}</span>",
+        "format-charging": "{capacity}%  <span font-family='Font Awesome 6 Free'></span>",
+        "format-icons": ["", "", "", "", ""],
+        "interval": 1
+    }
+},
+{
+    "name": "app-bar",
+    "position": "bottom",
+
+    "layer": "top",
+    "margin-bottom": 5,
+
+    "modules-center": ["wlr/taskbar"],
+
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "format-active": "{icon} {name}",
+        "tooltip-format": "{name}",
+        "on-click-middle": "close",
+        "on-click": "activate"
+    }
+}]
